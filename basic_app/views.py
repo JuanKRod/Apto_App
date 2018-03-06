@@ -18,6 +18,7 @@ class IndexView(TemplateView):
 
 class SchoolListView(ListView):
     model = models.School
+    #school_list
 
 
 class SchoolDetailView(DetailView):
@@ -29,10 +30,12 @@ class SchoolDetailView(DetailView):
 class SchoolCreateView(CreateView):
     fields = ("nombre","email","celular","torre","piso","numero_de_apartamento")
     model = models.School
+    template_name = 'basic_app/apto_form.html'
+
 
 
 class SchoolUpdateView(UpdateView):
-    fields = ("name","principal")
+    fields = ("nombre","email","celular","torre","piso","numero_de_apartamento")
     model = models.School
 
 class SchoolDeleteView(DeleteView):

@@ -1,0 +1,18 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+
+    <h1>Apartamentos</h1>
+    <h2>registrados</h2>
+      <ol>
+        {% for school in school_list %}
+        <h2><li><a href="{{school.id}}">{{school.nombre}}</a></li></h2>
+
+          <!-- <h2><li><a href="{{school.id}}/">{{school.nombre}} </a></li></h2> -->
+        {% endfor %}
+      </ol>
+
+  </div>
+
+
+{% endblock %}
